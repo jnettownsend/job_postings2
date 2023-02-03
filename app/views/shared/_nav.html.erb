@@ -1,0 +1,8 @@
+<ul>
+  <li><%= link_to 'Home', root_path %></li>
+  <li><%= link_to 'Jobs', jobs_path %></li>
+  <li>
+    <%= form_with url: "/openings/search", method: :get do |form| %> <%= form.label :query, "Search for:" %> 
+    <%= form.text_field :query %> <%= form.submit "Search" %> <% end %>
+    </li>
+</ul>
