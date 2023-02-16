@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
   before_action :set_job, only: %i[ show edit update destroy ]
+  before_action :redirect_if_guest 
 
   # GET /jobs or /jobs.json
   def index
@@ -21,7 +22,7 @@ class JobsController < ApplicationController
 
   # POST /jobs or /jobs.json
   def create
-    @job = Job.new(job_params)
+    @job = helpers.current_user.Job.new(job_params)
 
     respond_to do |format|
       if @job.save

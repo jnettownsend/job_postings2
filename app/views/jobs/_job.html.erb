@@ -1,4 +1,10 @@
 <div id="<%= dom_id job %>">
+  <% if job.user %>
+    <div>Posted by: <%= job.user.email %> </div>
+  <% end %>
+
+<% job.each do |title|>
+
   <p>
     <strong>Title:</strong>
     <%= job.title %>
