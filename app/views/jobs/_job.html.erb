@@ -1,11 +1,3 @@
-<<<<<<< Updated upstream
-<div id="<%= dom_id job %>">
-  <% if job.user %>
-    <div>Posted by: <%= job.user.email %> </div>
-  <% end %>
-
-<% job.each do |title|>
-
   <p>
     <strong>Title:</strong>
     <%= job.title %>
@@ -25,31 +17,10 @@
     <strong>Location:</strong>
     <%= job.location %>
   </p>
-=======
-<div id="<%= dom_id job %>">
-  <% if job.user %>
-    <div>Posted by: <%= job.user.email %> </div>
-  <% end %>
-
-
-  <p>
-    <strong>Title:</strong>
-    <%= job.title %>
-  </p>
-
-  <p>
-    <strong>Company:</strong>
-    <%= job.company %>
-  </p>
-
-  <p>
-    <strong>Salary:</strong>
-    <%= job.salary %>
-  </p>
-
-  <p>
-    <strong>Location:</strong>
-    <%= job.location %>
-  </p>
->>>>>>> Stashed changes
 </div>
+
+<div id="<%= dom_id job %>">
+  <% if job.user %>
+    <div><i><strong>Posted by: </strong>
+    <%= job.user.email %> </i></div>
+  <% end %>

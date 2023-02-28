@@ -1,12 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Jobs</h1>
+<center><h1>Current Job Openings</h1></center>
+<center><p>The following positions are currently available!</p></center>
+<br><br>
 
 <div id="jobs">
   <% @jobs.each do |job| %>
     <%= render job %>
     <p>
-      <%= link_to "Show this job", job %>
+      <%= link_to "More details", job %>
     </p>
     <hr>
   <% end %>

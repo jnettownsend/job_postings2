@@ -11,6 +11,12 @@
     </div>
   <% end %>
 
+<div class="job-form">
+  <div>
+    <center><h1><strong>New Job</strong></h1></center>
+    <center><p><i>Complete the form below.</i></p></center>
+  </div>
+  
   <div>
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
@@ -32,6 +38,13 @@
   </div>
 
   <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
+
+</div>
 <% end %>
